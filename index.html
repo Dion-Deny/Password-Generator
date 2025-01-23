@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="heading">Generate a <br> <span>random password</span></p>
+            <p class="subheading">Never use an insecure password again.</p>
+        </div>
+        <div class="password-criteria">
+            <div class="password-length">
+                <div class="range-heading">
+                    <label for="password-length">Password Length: </label>
+                    <p class="range-value">15</p>
+                </div>
+                <div class="range">
+                    <span class="material-symbols-outlined icon minus">
+                        remove
+                    </span>
+                    <input type="range" name="password-length" id="password-length" min="1" max="50" value="15">
+                    <span class="material-symbols-outlined icon plus">
+                    add
+                    </span>        
+                </div>
+            </div>
+            <div class="password-characters">
+                <legend>Password Characters:</legend>
+                <div class="characters-container">
+                    <div class="input-label extra">
+                        <input type="checkbox" name="capital-letters" id="capital-letters" checked> 
+                        <label for="capital-letters">ABC</label>
+                    </div>
+                    <div class="input-label normal">
+                        <input type="checkbox" name="small-letter" id="small-letters" checked >
+                        <label for="small-letters">abc</label>
+                    </div>
+                    <div class="input-label normal">
+                        <input type="checkbox" name="numbers" id="numbers" checked> 
+                        <label for="numbers">123</label>
+                    </div>
+                    <div class="input-label extra">
+                        <input type="checkbox" name="symbols" id="symbols" checked> 
+                        <label for="symbols">#$&</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="password-btn">
+            <button class="generate-password-btn">Generate passwords</button>
+        </div>
+        <hr>
+        <div class="passwords">
+            <div class="password-container"><p class="password-one password"></p> <p class="copy copyone">Copy</p></div>
+            <div class="password-container"><p class="password-two password"></p> <p class="copy copytwo">Copy</p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
